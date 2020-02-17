@@ -3,17 +3,17 @@ html {
     font-family: 'Roboto', sans-serif;
     text-align: left;
     background-color: rgb(255, 255, 255);
-    width: 50%;
+    width: calc(200px + 40vw);
     margin: auto;
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: calc(2em + 2vw);
     margin: 0;
 }
 
 header h2 {
-    font-size: 1em;
+    font-size: calc(0.5em + 0.5vw);
     margin: 0;
 }
 
@@ -40,3 +40,4 @@ main img {
     padding: 20px 0;
     width: 100%;
 }
+
