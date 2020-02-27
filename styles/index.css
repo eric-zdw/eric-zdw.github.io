@@ -62,3 +62,11 @@ body p {
     line-height: 1.6;
 }
 
+footer {
+    font-size: calc(0.75em + 0.05vw);
+}
+
+footer p {
+    color: #888888;
+}
+
