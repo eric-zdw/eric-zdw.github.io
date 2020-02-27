@@ -1,9 +1,9 @@
 html {
-    font-size: 16px;
+    font-size: medium;
     font-family: 'Roboto', sans-serif;
     text-align: left;
     background-color: rgb(255, 255, 255);
-    width: calc(200px + 40vw);
+    width: calc(300px + 25vw);
     margin: auto;
 }
 
@@ -35,9 +35,30 @@ nav li a {
     color: #000000;
 }
 
-main img {
+.row {
+    background-color: blueviolet;
+}
+
+.column {
+    display: inline-block;
+    width: 40%;
+    padding: 1%;
+    background-color: aqua;
+}
+
+img {
+    width:100%;
+}
+
+body h1 {
     display: block;
-    padding: 20px 0;
-    width: 100%;
+    font-size: calc(2.5em + 1vw);
+    line-height: 1;
+}
+
+body p {
+    display: block;
+    font-size: calc(1em + 0.1vw);
+    line-height: 1.6;
 }
 
