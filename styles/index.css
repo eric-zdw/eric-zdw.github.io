@@ -53,7 +53,7 @@ img {
 body h1 {
     display: block;
     font-size: calc(2.5em + 1vw);
-    line-height: 1;
+    line-height: 1.2;
 }
 
 body p {
