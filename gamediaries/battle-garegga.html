@@ -10,24 +10,16 @@
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../styles/index.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script> 
+            $(function(){
+              $("#header").load("header.html"); 
+              $("#footer").load("footer.html"); 
+            });
+        </script> 
     </head>
     <body>
-        <header>
-            <h1>eric.zdw</h1>
-            <h2>A website about games</h2>
-        </header>
-        <hr>
-        <nav>
-            <ul>
-            <li><a href="../index.html"
-              title="Homepage - Eric's Website"> Homepage</a></li>
-            <li><a href="index.html"
-              title="Homepage - Eric's Website"> Projects</a></li>
-            <li><a href="gamediaries/index.html"
-               title="Game Diaries - Eric's Website"> Game diaries</a></li>
-            </ul> 
-        </nav>
-        <hr>
+        <div id="header"></div>
         <h1>Battle Garegga</h1>
         <div class="row">
             <div class="column">
@@ -44,9 +36,7 @@
         <p>The game makes few compromises and breaks established game design rules to establish its own identity. Battle Garegga is meant to be an extremely difficult and uncompromising game, and Raizing’s design strongly communicates this. An example: bullets in this game are very hard to see. They’re small, and they’re coloured realistically, so they also blend in with the muted background and scraps of planes scattering across the screen. And yet in Battle Garegga, I can accept it as another facet of the game’s design. Raizing thought that making them harder to see was the ideal design choice for this game, and forces the player to meet them on their own terms. The magic word is <em>intent</em>: it’s clear the developers intended for this to be the case, so these elements don’t feel unfair. Not only that, it motivates me to improve at the game, to step up to a challenge posed by the developers.</p>
         <p>Gameplay mechanics are archaic, but also result in more rewarding gameplay strategies. There’s no intuitive explanation why missing powerups should give the player different option formations. The average player would never even think to do such a thing intentionally, let alone realize such a mechanic exists. But it does exist, and players who discover this aspect of Battle Garegga have another subtlety in their game plan that integrates with gameplay in an abstract, yet excitingly innovative way. </p>
         <br>
-        <footer>
-            <p>eric.zdw<br>© 2020 Eric Du</p>
-        </footer>
+        <div id="footer"></div>
     </body>
 </html>
 

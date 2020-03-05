@@ -10,29 +10,20 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../styles/index.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script> 
+            $(function(){
+              $("#header").load("header.html"); 
+              $("#footer").load("footer.html"); 
+            });
+        </script> 
     </head>
     <body>
-        <header>
-            <h1>eric.zdw</h1>
-            <h2>A website about games</h2>
-        </header>
-        <hr>
-        <nav>
-            <ul>
-            <li><a href="../index.html"
-              title="Homepage - Eric's Website"> Homepage</a></li>
-            <li><a href="index.html"
-              title="Homepage - Eric's Website"> Projects</a></li>
-            <li><a href="gamediaries/index.html"
-               title="Game Diaries - Eric's Website"> Game diaries</a></li>
-            </ul> 
-        </nav>
-        <hr>
+        <div id="header"></div>
         <h1>Great Games</h1>
-        <h2>Games I think are great, and why I think they're great.</h2>
-        <br>
         <h3>B</h3>
         <p><a href="battle-garegga.html">Battle Garegga</a></p>
+        <div id="footer"></div>
     </body>
 </html>
 
