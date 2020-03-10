@@ -39,15 +39,10 @@ nav li a {
     color: #000000;
 }
 
-.row {
-    background-color: lightgrey;
-    text-align: center;
-}
-
 .column {
     display: inline-block;
-    width: 40%;
-    padding: 2%;
+    width: 30%;
+    padding: 0%
 }
 
 img {
