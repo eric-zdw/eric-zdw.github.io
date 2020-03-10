@@ -40,7 +40,7 @@ nav li a {
 }
 
 .row {
-    background-color: lightgrey;
+    background-color: rgb(240, 240, 240);
     text-align: center;
 }
 
@@ -78,6 +78,6 @@ footer {
 }
 
 footer p {
-    color: #888888;
+    color: rgb(160, 160, 192);
 }
 
