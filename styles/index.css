@@ -36,14 +36,14 @@ nav li a {
 }
 
 .row {
-    background-color: blueviolet;
+    background-color: lightgrey;
+    text-align: center;
 }
 
 .column {
     display: inline-block;
     width: 40%;
     padding: 1%;
-    background-color: aqua;
 }
 
 img {
