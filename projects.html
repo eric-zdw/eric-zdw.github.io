@@ -1,0 +1,8 @@
+---
+title: Games
+---
+<h2>Projects</h2>
+{% for project in site.projects %}
+    <h3>{{ project.title }}</h3>
+    {{project.content}}
+{% endfor %}
