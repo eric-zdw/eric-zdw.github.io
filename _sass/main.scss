@@ -4,6 +4,7 @@ $roboto: 'Roboto', sans-serif;
 $roboto-mono: 'Roboto Mono', sans-serif; 
 
 
+
 html {
     font-size: medium;
     font-family: 'Roboto', sans-serif;
@@ -46,8 +47,8 @@ nav li a {
 }
 
 .iframe-container {
-    width: calc(min(300px + 30vw, 90vw));
-    height: calc(min(300px + 30vw, 90vw) * 0.5625);
+    width: calc(min(32em + 20vw, 90vw));
+    height: calc(min(32em + 20vw, 90vw) * 0.5625);
     margin: auto;
 }
 
@@ -94,7 +95,7 @@ body {
     font-family: $roboto;
     background-color: rgb(255, 255, 255);
     padding: 2% 5%;
-    width: calc(min(300px + 30vw, 90vw));
+    width: calc(min(32em + 20vw, 90vw));
     margin: auto;
 }
 
