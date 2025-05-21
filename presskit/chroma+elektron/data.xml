@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<product>
+  <title>CHROMA+ELEKTRON</title>
+  <release-date>02 May, 2025</release-date>
+  <website>https://store.steampowered.com/app/1020550/CHROMAELEKTRON/</website>
+
+  <!-- Link to request press copy: -->
+  <press-copy-request></press-copy-request>
+
+  <platforms>
+    <platform>
+      <name>PC (Steam)</name>
+      <link>https://store.steampowered.com/app/1020550/CHROMAELEKTRON/</link>
+    </platform>
+  </platforms>
+
+  <prices>
+    <price>
+      <currency>USD</currency>
+      <value>14.99</value>
+    </price>
+  </prices>
+
+  <description>CHROMA+ELEKTRON is a 2D twin-stick shooter. Collect energy and unleash powerful weapons and abilities. Increasingly difficult waves of enemies. Return all chromatic energy to its proper state. Your speed and power will know no equal. </description>
+
+  <!-- Choose between a single block: -->
+  <history>For my first major project, I wanted to make a game that brings together my major influences as a sort of mission statement. Quickly adapting to new weapons is partially inspired by Quake and its weapon-for-every-occasion quality; certain musical tracks and the 2D-platformer-shooter format are loosely inspired by Cave Story; and the simple-abstractual visuals and music reminds me of Rez. Beyond putting together a bunch of different games, though, the goal was to make a lasting emotional experience, using "flow" unique to difficult, high-movement action games as a basis and building upon that with other elements.</history>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+  <features>
+    <feature>Fast-paced, highly challenging shoot 'em up gameplay: overcome impossible odds.</feature>
+    <feature>Unlock all 12 weapons to use, and 12 "burst powers" to turn the tide.</feature>
+    <feature>Over 15 different enemy types including 4 challenging bosses.</feature>
+    <feature>14 unique levels, each with their own layouts, visuals and strategies, totalling around 15-30 hours of playtime.</feature>
+    <feature>Original soundtrack that builds as you progress through waves of enemies.</feature>
+    <feature>Robust scoring system--aim for proficiency and max performance.</feature>
+    <feature>Many accessibility options are available, such as difficulty modifiers and control options. Everyone can overcome impossible odds.</feature>
+  </features>
+
+  <trailers>
+    <trailer>
+      <name>Reveal Trailer</name>
+
+      <!-- Pick one: -->
+      <youtube>
+        ky6_nvPyKO8
+      </youtube>
+    </trailer>
+  </trailers>
+
+  <!-- You can set your widgets here (optional): -->
+  <widgets>
+    <steam>
+      1020550
+    </steam>
+    <itch>
+      1495236
+    </itch>
+  </widgets>
+
+  <!--
+  <awards>
+    <award>
+      <description></description>
+      <info></info>
+    </award>
+  </awards>
+  -->
+
+  <!--
+  <quotes>
+    <quote>
+      <description></description>
+      <name></name>
+      <website></website>
+      <link></link>
+    </quote>
+  </quotes>
+    -->
+
+  <additionals>
+    <additional>
+      <title></title>
+      <description></description>
+      <link></link>
+    </additional>
+  </additionals>
+
+  <credits>
+    <credit>
+      <person>Eric Du (eric.zdw)</person>
+      <role>Design, Programming, Sound, Music</role>
+
+      <!-- Optional: -->
+      <website></website>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name>Eric Du (eric.zdw)</name>
+
+      <!-- Pick one: -->
+      <mail></mail>
+      <link></link>
+    </contact>
+  </contacts>
+</product>

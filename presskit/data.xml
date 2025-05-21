@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<company>
+  <title>Eric·ZDW</title>
+  <based-in>Toronto, Canada</based-in>
+  <founding-date>2025</founding-date>
+  <website>https://ericzdw.dev</website>
+  <press-contact>
+    eric.zdw@gmail.com
+  </press-contact>
+
+  <!-- Google analytics ID: -->
+  <!-- <analytics></analytics> -->
+
+  <phone>+1-613-884-5668</phone>
+
+  <address>
+    <line>
+      Toronto ON
+    </line>
+    <line>
+      Canada
+    </line>
+  </address>
+
+  <socials>
+    <social>
+      <name>Bluesky</name>
+      <link>
+        https://bsky.app/profile/ericzdw.bsky.social
+      </link>
+    </social>
+  </socials>
+
+  <description>Hi! I'm Eric. Eric·ZDW is a solo project. Gameplay is emotional; I want to make games from my heart. The initials "ZDW" come from the names of me and my parents.</description>
+
+  <!-- Choose between a single block: -->
+  <history>I've been playing games for over 20 years, and wanted to take a crack at it myself. I like to listen to lot of music, watch a lot of movies, read a lot of books, but was always drawn to the unique qualities of games.</history>
+
+  <!-- Or multiple blocks: -->
+  <!--
+  <histories>
+    <history>
+      <header></header>
+      <text></text>
+    </history>
+  </histories>
+  -->
+
+  <trailers>
+    <trailer>
+      <name>CHROMA+ELEKTRON - Reveal Trailer</name>
+
+      <!-- Pick one: -->
+      <youtube>
+        ky6_nvPyKO8
+      </youtube>
+      <!--
+      <vimeo>
+      </vimeo>
+      -->
+    </trailer>
+  </trailers>
+
+  <!--
+  <awards>
+    <award>
+      <description></description>
+      <info></info>
+    </award>
+  </awards>
+  -->
+
+  <!--
+  <quotes>
+    <quote>
+      <description></description>
+      <name></name>
+      <website></website>
+      <link></link>
+    </quote>
+  </quotes>
+  -->
+
+  <additionals>
+    <additional>
+      <title></title>
+      <description></description>
+      <link></link>
+    </additional>
+  </additionals>
+
+  <credits>
+    <credit>
+      <person>Eric Du (eric.zdw)</person>
+      <role>Founder, Designer/Programmer</role>
+
+      <!-- Optional: -->
+      <website></website>
+    </credit>
+  </credits>
+
+  <contacts>
+    <contact>
+      <name>Inquiries</name>
+
+      <!-- Pick one: -->
+      <mail>eric.zdw@gmail.com</mail>
+      <link></link>
+    </contact>
+  </contacts>
+</company>
