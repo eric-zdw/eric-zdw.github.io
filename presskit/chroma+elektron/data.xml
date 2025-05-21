@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <product>
   <title>CHROMA+ELEKTRON</title>
-  <release-date>02 May, 2025</release-date>
+  <release-dates>
+    <release-date>02 May 2025</release-date>
+  </release-dates>
   <website>https://store.steampowered.com/app/1020550/CHROMAELEKTRON/</website>
 
   <!-- Link to request press copy: -->
