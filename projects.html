@@ -3,6 +3,7 @@ title: Games
 ---
     
 <h2>Projects</h2>
+{% assign sorted_projects = site.projects | sort: 'name' %}
 {% for project in site.projects %}
     <h3>{{ project.title }}</h3>
     {{project.content}}

@@ -5,7 +5,7 @@ link: https://ericzdw.itch.io/feedbacker
 
 Make beat loops, listen to them layer over each other through time and improvise new music!
 
-Made in 96 hours for GMTK Game Jam 2025. Ranked #112 out 9590 entries in Audio category.
+Made in 96 hours for GMTK Game Jam 2025. Ranked #112 out of 9590 entries in Audio category.
 
 [Download and more information here (itch.io).](https://ericzdw.itch.io/feedbacker)
 

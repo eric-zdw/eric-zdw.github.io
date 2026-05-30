@@ -1,22 +1,31 @@
 ---
-title: Thoughts
+title: Writings
 ---
+<h2>Games</h2>
 
-<h2>Thoughts</h2>
-<p>Soon to come!</p>
-
-<!--
-<h3>Games</h3>
-
-{% for cat in site.categories %}
-    {% if cat[0] == "games" %}
-    <ul>
-        {% for post in cat[1] %}
+{% assign game_groups = site.categories.games | group_by_exp: "item", "item.title | truncate: 1, '' | upcase" | sort: "name" %}
+{% for group in game_groups %}
+    <h3>{{ group.name }}</h3>
+    {% assign sorted_group = group.items | sort: "title" %}
+    {% for post in sorted_group %}
+        <ul>
             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+        </ul>
+    {% endfor %}
 {% endfor %}
 
-<h3>Other</h3>
--->
+<br>
+<hr>
+
+<h2>Film</h2>
+
+{% assign film_groups = site.categories.films | group_by_exp: "item", "item.title | truncate: 1, '' | upcase" %}
+{% for group in film_groups %}
+    <h3>{{ group.name }}</h3>
+    {% assign sorted_group = group.items | sort: "title" %}
+    {% for post in sorted_group %}
+        <ul>
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        </ul>
+    {% endfor %}
+{% endfor %}

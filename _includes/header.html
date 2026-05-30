@@ -1,11 +1,14 @@
 <header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <h1>
     <div class = header-image>
-      <img src="/assets/images/headerlogo.png" alt="Eric.ZDW">
+      <a href="{% link index.html %}">
+        <img src="/assets/images/headerlogo.png" alt="Eric.ZDW">
+      </a>
     </div>
   </h1>
   <nav>
-    <ul>
+    <ul class="navlist">
       {% for item in site.data.navigation %}
         <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
       {% endfor %}
