@@ -5,7 +5,8 @@ link: https://store.steampowered.com/app/1020550/CHROMAELEKTRON/
 CHROMA+ELEKTRON is a fast-paced 2D twin-stick shooter. Now in Early Access.
 Selected for Hand Eye Society's Super FESTival 2025 showcase.
 
-[Visit the Steam store.](https://store.steampowered.com/app/1020550/CHROMAELEKTRON/)
+[Visit the Steam store.](https://store.steampowered.com/app/1020550/CHROMAELEKTRON/)  
+[Read about its development.]({% link _projects/chromaelektron.md %})
 
 <div class="image-grid">
     <div class = "image-grid-box"><img src="/assets/images/screen2.png" alt="CHROMA+ELEKTRON Screenshot 1"></div>

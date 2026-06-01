@@ -16,15 +16,14 @@ Table of Contents
     - [Example:](#example)
   - [Level Design](#level-design)
     - [Example: Blue Room](#example-blue-room)
-  - [Visuals](#visuals)
+  - [Enemy Design and Programming](#enemy-design-and-programming)
+    - [Example: Boss 3](#example-boss-3)
   - [Sound Design and Music](#sound-design-and-music)
+    - [Example: Track 6](#example-track-6)
 - [Sea Salt City](#sea-salt-city)
   - [Concept](#concept-1)
   - [Design](#design)
-  - [Movement](#movement)
-  - [Visuals](#visuals-1)
-  - [Sound Design](#sound-design)
-  - [Music](#music)
+  - [Sound and Music](#sound-and-music)
 - [Feedbacker](#feedbacker)
   - [Concept](#concept-2)
   - [Design](#design-1)
@@ -61,7 +60,7 @@ The interaction between these two resources and the rest of the system is where 
 
 There are six colors and six sets of abilities that a player can switch between during a level.
 
-How to make each weapon memorable and fun to use? In CHROMA ELECTRON, this manifests in several ways:
+How to make each weapon memorable and fun to use? In CHROMA+ELEKTRON, this manifests in several ways:
 - Each weapon presents a real-world physical aspect. Yellow weapons evoke ballistics, green weapons evoke gravity, purple weapons evoke plasma.
 - Each weapon can be used in a 
 
@@ -77,19 +76,13 @@ Upon impact, the missile explodes with a small radius; very tightly grouped enem
 
 ### Level Design
 
-The game is played linearly through levels.
-
-At the beginning of a level, the player is required to reach a powerup that will trigger the start of the level. During this period, there's no music and players are encouraged to explore the layout of the level. 
-
-In contrast with standard game design practice, there are no substantial moments of downtime to the gameplay loop; it isn't important that the player experiences the game in one continuous fashion.
-
 Visually, each level should evoke some idea, an overall emotional impression; however, each level should also remain abstract, with some separation of concepts found in the real world. The order of the levels forms an arc, with smaller, secluded, abstract designs in the first third; expanded sizes and visuals referencing the outside in the second; and complex, antagonistic architecture, inexorable motion, a "descent" in the last third.
 
 Because it's easier for players to drop to lower platforms than it is to jump higher, players will tend towards the lower areas of a level. Levels were designed either to compensate for this characteristic or emphasized as a challenge. In "Scaffold", the defining level element is a tower containing a jump pad that immediately launches the player to the top of the level. Since this is the easiest method of reaching the top of the level, the player's movements centralize around the tower at the bottom of the level, while being more free in decisions regarding how to traverse the level back down to the bottom. In "Stillwater", the fluctuating water levels forces a player to rise in altitude with the tide; the tendency for players to settle at the bottom of a level becomes a challenge that needs to be constantly managed.
 
 #### Example: Blue Room
 
-"Blue Room" is the first level in the game, and it needs to present many ideas to the player for the first time. It is small in size, and is tied for smallest level area with the second level. To complement the small space, the level is dimly lit, with a dark blue dominant color. The background visually centers around a small platform situated in the middle of the room, with a spotlight from above shining down. The overall effect is meant to be intimate and secluded, combined with an impression similar to being deep underwater. The ceiling is comprised of arches, somewhat evoking church archtecture while making the ceiling area spacious, making it easier for new players to experiment moving in open air.
+"Blue Room" is the first level in the game, and it needs to present several ideas to the player for the first time. It is smaller in size compared to the average stage. To complement the small space, the level is dimly lit, with a dark blue dominant color. The background visually centers around a small platform situated in the middle of the room, with a spotlight from above shining down. The overall effect is meant to be intimate and secluded, combined with an impression similar to being deep underwater. The ceiling is an arch shape, making the ceiling area more spacious and making it easier for new players to experiment moving in open air.
 
 There are relatively few platforms, and the level has no unique obstacles. No platforms are particularly long and there are gaps in between, giving players relatively unimpeded vertical movement through the level. In the bottom corners of map are sets of two jumppads; the first jumppad provides easy access to the lower platforms, and the player can decide whether to jump onto these lower platforms or take the second jumppad to reach the upper platforms.
 
@@ -97,23 +90,35 @@ Despite the simple layout, some familiarity with the level's layout will result 
 
 Stage powerups are introduced here for the first time, and always appear at pre-determined stations indicated to the player. Upon picking up a stage powerup, another powerup will appear at any nearby station.
 
-Finally, the level introduces enemy rails, which grounded enemies can use to traverse across platforms. When a grounded enemy begins travelling on a rail, the entire rail flashes lightly, warning players of an incoming enemy. While not necessary for a new player to learn, for players more familiar with the game or for those seeking mastery, the layout of rails in a level is important for understanding specific points where levels can be particularly risky. Here, rails are placed on the edges of the level; since players are more likely to approach platforms from the sides and towards the center, this makes head-on collisions with grounded enemies leaving rails less likely.
+Finally, the level introduces enemy rails, which grounded enemies can use to traverse across platforms. While not necessary for a new player to learn, for players more familiar with the game or for those seeking mastery, the layout of rails in a level is important for understanding specific points where levels can be particularly risky. Here, rails are placed on the edges of the level; since players are more likely to approach platforms from the sides and towards the center, this makes head-on collisions with grounded enemies leaving rails less likely.
 
-### Visuals
+### Enemy Design and Programming
 
-The primary visual strategy is to use primitive shapes along with heavy use of particle effects. There are several advantages to adopting this visual style:
+Each level consists of six increasingly difficult waves of enemies that must be cleared before proceeding the to the next wave. 
 
-1. A simple visual style tends to be highly legible, easy to convey information quickly, which complements the action gameplay nicely.
-2. A simple visual style dovetails nicely into the overarching concept of a game operating on its base elements.
-3. It lets me easily leverage programmatic methods of creating visuals--particle systems in particular can be manipulated into an endless variety of interesting effects with some programming.
+Enemies use a custom A* pathfinding algorithm to create a path to the player. This algorithm can accomodate different types of locomotion (grounded enemies vs. air enemies) and different enemy sizes. The pathfinding algorithm can pause calculation and resume on future frames, allowing for time-slicing and sharing execution time across several enemies.
 
-Level environments are 
+The pathfinding grid is automatically populated with a grid of traversable nodes.
+
+Some levels will end with a large boss on the last wave.
+
+#### Example: Boss 3
+
+Boss 3 (nicknamed "Snake") consists of a main Head piece and several Tail pieces that follow it. The tail pieces are physical rigidbodies and can be pushed around by forces such as explosions, but move back into position once pushed. The amount of distance between tail pieces can be adjusted dynamically as a parameter, allowing for stretching and squishing for specific movements (for example, the tail can be squished as the head rears back, preparing for a strike).
+
+During its idle phase, the head moves in a slow, menacing circular motion around the player.
+
+Some attacks detach the tail pieces completely. For example, one of its latter-phase attacks have the tail pieces separate and surround the player, reducing the space which the player can maneuver; the head then fires slow moving projectiles into the tail "arena".
 
 ### Sound Design and Music
 
-Music has an outsized influence in how I design my games. There are eight total tracks that play during gameplay; each one is constructed such that they build in energy as the game progresses. 
+I singled out weapon sounds as especially high-priority; these sounds are omnipresent through the experience of the game, punctuate the action at all times, and the overall rhythmic impression of the game will be these sounds. It's important that each color has its own sound identity as a way to punctuate switching colors; if the weapons sounded too similar, the feeling of switching colors would feel more monotonous in turn. Red weapons have a characteristic high-treble, gaseous and "sharp" signature, while purple weapons are more characterized by the "hum" reminiscent of electricity.
 
-I singled out weapon sounds as especially high-priority; these sounds are omnipresent through the experience of the game, punctuate the action at all times, and the overall rhythmic impression of the game will be these sounds. It was important that each color has its own sound identity as a way to convey the switching of abilites. Red weapons have a characteristic high-treble, gaseous and "sharp" signature, while purple weapons are more characterized by the "hum" reminiscent of electricity.
+Music has an outsized influence in how I design my games. Each level is associated with one specific track, and each one is constructed such that they build momentum in parallel to the gameplay as the waves progress. 
+
+#### Example: Track 6
+
+
 
 <hr>
 
@@ -128,7 +133,7 @@ I singled out weapon sounds as especially high-priority; these sounds are omnipr
 
 Sea Salt City is a first-person shooter created in 10 days for Bigmode Game Jam 2026. It was voted #1 out of 647 entries in the Fun Category, and it was awarded as a finalist as the "Best Successor to Kingdom Hearts 2" (I've only played the first game).
 
-As the solo developer of the game, I created the concept, game design, programming, visuals, sound effects and music.
+As the solo developer of the game, I created the concept, game design, programming, visuals, sound effects and music, with some SFX exceptions.
 
 ### Concept
 
@@ -136,35 +141,27 @@ One issue with game jams is that, once the jam is over, nearly all games in one 
 
 The theme of the game jam was "Slick", which immediately brings to mind two aspects: things that are "cool", such as movements in action games, expressions of skill; another is the slipperiness of a "slick" material. Combined with the questions posed above, and that a player likely only has ten minutes to play the game, my concept going into the beginning of the jam revolved around an action game condensed in a "song" format. Like a song, the game would be short, but you can come back to it again anytime you want to experience it again. The best songs are ones you can listen to at any time and be changed by it when it's done, for the rest of your day or for periods of your life. This is one aspect I really aspired to capture.
 
+Visually, I opted for a stark, white-blue palette, with a subtle blue tint. I made the water and the sky both a deep, frigid blue, and I chose white for most architectural elements, both to stand out against the water and sky, and also to evoke the water's erosion of structures (as if the architecture had been "bleached white"); I hoped to lightly tie together this "erosion" and subtle passage of time with the theme of memory.
+
 ### Design
 
 At first, in line with the theme of the jam, I wanted to create a loop that revolved around
 
-Initially the game would be available to play in both first-person and third-person; the third-person view would eventually be cut.
-
-The "song" format of the game extends to how progression works in the game. The game runs on a timer, with each level lasting 90 seconds. The music ramps up at each level as an indicator.
-
 The game makes extensive usage of Unity's built-in HDRP water shader. While researching approaches to creating water suitable for what I needed, I stumbled across its documentation and was seriously impressed by its flexibility, ways to manipulate it and ways to interact with it through gameplay. While built for more realistic AAA applications, I wanted to push its limitations in a gameplay context and manipulate it in a more stylized, non-realistic manner.
 
-### Movement
+The player can rotate in along all three degrees of freedom. The goal was to have unfettered rotational movement, to be able to frame targets in any orientation. However, if the camera was completely unlocked at all times, the game would quickly become unplayable. In order to achieve this while still having a sense of functionality, the game switches between two modes behind the scenes: a default mode that constraints the camera like a standard FPS, and a free mode that activates when the player rotates in the air, which unlocks all degrees of freedom. This scheme was inspired by *Echo Point Nova*, an FPS that also allows for free range of motion, but only once the player signals the intention to do so by moving the mouse in a vertical flipping motion; In this game, rotation is instead mapped to keys (Q/E to roll, R/F to pitch). Combined with the implementation of inertia added to the rotational controls, mapping rotation to keys is meant to emulate the inertia of rotating the entire body, with the mouse movements emulating the smaller motions of the head/neck. 
 
-In Sea Salt City, the player can rotate in along all three degrees of freedom. The goal was to have unfettered rotational movement, to be able to frame targets in any orientation. However, if the camera was completely unlocked at all times, the game would quickly become unplayable. In order to achieve this while still having a sense of functionality, the game has two modes, a default mode that constraints the camera like a standard FPS, and a free mode that activates when the player rotates in the air, which unlocks all degrees of freedom. This was inspired by *Echo Point Nova*, an FPS that also allows for free range of motion, but only once the player moves the mouse in a vertical flipping motion. In this game, instead, rotation is mapped to keys (Q/E to roll, R/F to pitch). Combined with the implementation of inertia added to the rotational controls, the impression is closer to operating a camera rig on three separate axes, using the mouse for more precise adjustments.
+I drew from several inspirations for the use of free rotation. I was inspired by experimental film, in particular Michael Snow's *La Région Centrale*, a film made with a free-rotating camera filming an empty landscape; simply by using rotational movements in all directions, it manages to convey a full dramatic arc and unique intensity, each rotation as if freely rotating the world itself. I was also inspired by the Winter X Games, coincedentially watching the reruns of the Winter X Games leading up to the jam; I think the image of snowboarders sailing through the sky, rotating in several axes, was fresh in my mind.
 
-### Visuals
-
-I opted for a stark, white-blue palette, with a subtle blue tint. I made the water and the sky both a deep, frigid blue, and I chose white for most architectural elements, both to stand out against the water and sky, and also to evoke the water's erosion of structures (as if the architecture had been "bleached white"); I hoped to lightly tie together this "erosion" and subtle passage of time with the theme of memory.
-
-### Sound Design
+### Sound and Music
 
 The game makes use of two effects: the slow-motion effects and underwater effects.
 
-The underwater reverberation effect was an essential piece in the impression of being submerged; it's a universal experience to be submerged underwater for some length of the time, isolated by the muffling of sound.
+The underwater reverberation effect was an essential piece in the impression of being submerged; anyone who has gone swimming in a body of water knows the feeling of being submerged underwater, isolated by the muffled distortion of sound. Note that the music is distorted by the underwater effect, but not by the slow-motion effect: 
 
-### Music
+Keeping in line with a musical piece, the music and levels advance regardless of the player's performance in the game; partially because of this, the emotion of the music is set at a distance from the action of the game (*A Short Hike* is a good example of a soundtrack evoking a layer of sentimentality that layers *over* the action on the screen like a memory).
 
-The music was composed on the second-last day of the jam; I knew I wanted to compose the music as late as possible in order to release all of the emotions of creating the game into the music.
-
-Like a musical piece, the music and levels advance regardless of the player's performance in the game; partially because of this, the emotion of the music is at a distance from the action of the game (*A Short Hike* is a good example of a soundtrack evoking a layer of sentimentality separate from the gameplay).
+The music was composed on the second-last day of the jam; I knew I wanted to compose the music as late as possible in order to release all of the emotions of creating the game into the music. Because
 
 <hr>
 
@@ -172,7 +169,6 @@ Like a musical piece, the music and levels advance regardless of the player's pe
 
 <div class = "image-grid">
     <div class = "image-grid-box"><img src="/assets/images/feedbacker_1.png" alt="Feedbacker Screenshot 1"></div>
-    <div class = "image-grid-box"><img src="/assets/images/feedbacker_2.png" alt="Feedbacker Screenshot 2"></div>
     <div class = "image-grid-box"><img src="/assets/images/feedbacker_3.png" alt="Feedbacker Screenshot 3"></div>
 </div>
 
@@ -180,11 +176,17 @@ Like a musical piece, the music and levels advance regardless of the player's pe
 
 The theme of this game jam was "Loop", which I first associated with "music loops". More specifically, when I thought of music loops, I thought of it in two ways; the way electronic music revolved around variations of a central loop, and toys such as music boxes which would loop for as long as you play with the toy. In the end, I wanted to create a sort of "music toy/game hybrid". You could either approach it as a game with a goal (earn enough points to make it to the next level), or as a self-directed toy where the motivation is making musical loops and experimenting for its own sake.
 
+The temporal laying down of beats is combined with the spatial component of moving the cursor.
+
+<div class = "image-grid-box"><img src="/assets/images/feedbacker_3.png" alt="Feedbacker Screenshot 3"></div>
+
 ### Design
 
 This was an aspect of the game that I
 
-One key characteristic of laying down beats is that it's quite difficult to place beats exactly on the downbeat; this is intentional, though this ended up being one of the most criticized elements of the game. The main intention was to divert players from laying down the beat that they envisioned and having to live with the mistakes in the loop history. I have some thoughts about why this in particular was criticized. It's worth noting that, for some commentators, this aspect of the game immediately clicked and they described the game as if they were experimenting.
+The player can lay one of six different sounds, which spawn their own beat patterns. Each of these layouts are designed such that the player must move their cursor in a different space each loop, with the result that each loop must 
+
+One key characteristic of laying down beats is that it's quite difficult to place beats exactly on the downbeat; this is intentional, though this ended up being a criticized element of the game. The main intention was to encourage players improvise having to live with the mistakes in the loop history; otherwise, the average player would simply set down a "proper" 4/4 beat. Making the timing more difficult simultaneously allows for a higher skill ceiling when aiming for a high score. It's worth noting that, for some commentators, this aspect of the game immediately clicked and they described the game as if they were experimenting.
 
 ### Sound Design and Music
 

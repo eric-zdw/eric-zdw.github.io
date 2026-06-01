@@ -1,5 +1,7 @@
 collections:
+  projectblurbs:
   projects:
+    output: true
   portfolios:
     output: true
 
