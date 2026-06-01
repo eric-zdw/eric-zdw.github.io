@@ -3,9 +3,9 @@ title: Game Design Portfolio
 layout: post
 ---
 
-Hello, I'm Eric·ZDW. The initials "ZDW" come from the names of me and my parents. My goal is to make games that will stay with people, however that may look like.
+Hello, I'm Eric·ZDW. The initials "ZDW" come from the names of me and my parents. My goal is to make games that will stay with people, however that may look like. My design leans towards action games, but I make a point to take inspiration from any genre and nothing is off the table.
 
-Email: [eric.zdw@gmail.com](mailto:eric.zdw@gmail.com)\
+Email: [eric.zdw@gmail.com](mailto:eric.zdw@gmail.com)  
 Discord: ericzdw
 
 Table of Contents
@@ -40,27 +40,23 @@ Table of Contents
     <div class = "image-grid-box"><img src="/assets/images/crystal1.png" alt="CHROMA+ELEKTRON Screenshot 3"></div>  
 </div>
 
-CHROMA ELECTRON is a fast-paced 2D platformer-shooter. Selected for Hand Eye Society's Super FESTival 2025 showcase.  
+CHROMA+ELEKTRON is a fast-paced 2D platformer-shooter. Selected for Hand Eye Society's Super FESTival 2025 showcase.  
 
 As the solo developer of the game, I created the concept, game design, programming, visuals, sound effects, music and marketing materials.
 
 ### Concept
 
-Originally starting out as a student project, I initially wanted to make a game that reflects all of my influences as a sort of starting point. As development progressed, I wanted to express more fundamental aspects of the games ----------.
+A key chracteristic is that the game is abstract, with no explicit mention of narrative. How does the gameplay loop create drama without explicit narratives? No game is created with complete detatchment from the world, and in aiming to create something abstract, interesting, personal links to the real world will inevitably emerge. One design objective was to create a game that, with no explicit narrative, nevertheless expresses emotion. I felt the "flow state" inherent in the action game genre, and the unique intersection between effort and focus (the kind of experience I would get from games like *Quake*, *Devil May Cry*, and bullet hells), was a good starting point for evoking these emotions. The goal is to take this essence and push it towards a conclusive emotional experience; what it means to play a game, and what it means to create a game; finally to push the idea in a way that, if you're having fun playing the game, the "purpose" is already proven, it is self-evident.
 
-A key chracteristic is that the game is abstract, with no explicit expression of narrative. However, no game is created with complete detatchment from the world, and in aiming to create something abstract, interesting links to the real world will inevitably emerge. One design objective was to create a game that, with no explicit narrative, nevertheless expresses emotion. I felt the "flow state" inherent in the action game genre, and the intersection between effort and focus was a good starting point for evoking these emotions.
+Key to the gameplay loop are its two main resources: Color and Energy. Every enemy drops a color powerup; when the player touches it, the player's abilities change to its corresponding color. Energy acts as a representation of several quantities; it acts as a resource that must be expended to activate more powerful abilities, increase maneuverability, as well as recovering lost health. However, high levels of Energy also increase the game's speed. At high levels of Energy, the game can run as fast as double speed and can become uncontrollable unless the player expends it. The game features a scoring system that is closely tied to Energy. Points received by defeating enemies are multiplied proportionally to game speed. When aiming for a high score, the system is a constant push to play at energy levels as high as it can be harnessed.
 
-Key to the gameplay loop are its two main resources: Color and Energy. Every enemy drops a color powerup; when the player picks it up, the player's abilities change corresponding to its color.
-
-Energy acts as a representation of several quantities. It acts as a resource that must be expended to use more powerup attacks, as well as to recover lost shields. However, high levels of Energy also increase the game's speed. At high levels of Energy, the game can run as fast as double speed. The Endless game mode removes the limit on Energy entirely, introducing new implications to the gameplay loop.
-
-The interaction between these two resources and the rest of the system is where the game receives much of its complexity and novel decision-making, and these interactions permeate through much of the experience of playing the game. By interlocking the systems so closely and having them affect as many game elements as possible, I could no longer reliably predict how the game would behave in specific cases. The idea is to present the quantities as something inherent to the world. And finally, the idea is to take this system as a statement on what it means to play a game, and what it means to create a game.
+The interaction between these two resources and the rest of the system is where the game receives much of its complexity and novel decision-making, and these interactions permeate the experience of playing the game. By interlocking the systems so closely and having them affect as many game elements as possible, I could no longer reliably predict how the game would behave in specific cases. The idea is to present these concepts as indivisible properties inherent to the world.
 
 ### Weapons
 
 There are six colors and six sets of abilities that a player can switch between during a level.
 
-How to make each weapon memorable and fun to use? In CHROMA+ELEKTRON, this manifests in several ways:
+How to make each weapon memorable and leave an impression? In CHROMA+ELEKTRON, this manifests in several ways:
 - Each weapon presents a real-world physical aspect. Yellow weapons evoke ballistics, green weapons evoke gravity, purple weapons evoke plasma.
 - Each weapon can be used in a 
 
