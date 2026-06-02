@@ -23,6 +23,7 @@ Table of Contents
 - [Sea Salt City](#sea-salt-city)
   - [Concept](#concept-1)
   - [Design](#design)
+  - [Level Design](#level-design-1)
   - [Sound and Music](#sound-and-music)
 - [Feedbacker](#feedbacker)
   - [Concept](#concept-2)
@@ -135,9 +136,9 @@ As the solo developer of the game, I created the concept, game design, programmi
 
 One issue with game jams is that, once the jam is over, nearly all games in one are immediately lost media that no one will play. Considering this, some questions going into the game jam included, "How can I create something that I can look back on positively? "Can I create something that I can come back to again?"
 
-The theme of the game jam was "Slick", which immediately brings to mind two aspects: things that are "cool", such as movements in action games, expressions of skill; another is the slipperiness of a "slick" material. Combined with the questions posed above, and that a player likely only has ten minutes to play the game, my concept going into the beginning of the jam revolved around an action game condensed in a "song" format. Like a song, the game would be short, but you can come back to it again anytime you want to experience it again. The best songs are ones you can listen to at any time and be changed by it when it's done, for the rest of your day or for periods of your life. This is one aspect I really aspired to capture.
+The theme of the game jam was "Slick", which immediately brings to mind two aspects: things that are "cool", such as movements in action games, expressions of skill; another is the slipperiness of a "slick" material. Combined with the questions posed above, and that a player likely only has ten minutes to play the game, my concept going into the beginning of the jam revolved around an action game condensed in a "song" format. Like a song, the game would be short, but you can come back to it again anytime you want to experience it again. The best songs are ones you can listen to at any time and be changed by it when it's done, for the rest of your day or for long periods of your life. This is one aspect I really tried to capture here.
 
-Visually, I opted for a stark, white-blue palette, with a subtle blue tint. I made the water and the sky both a deep, frigid blue, and I chose white for most architectural elements, both to stand out against the water and sky, and also to evoke the water's erosion of structures (as if the architecture had been "bleached white"); I hoped to lightly tie together this "erosion" and subtle passage of time with the theme of memory.
+Visually, I opted for a stark, white-blue palette, with a subtly "overly" blue coloration. Many details were adjusted to keep in line with this palette; for example, shadows are adjusted to be a deeper blue. I made the water and the sky both a frigid blue, and I chose white for most architectural elements, both to stand out against the water and sky, and also to evoke the water's erosion of structures (as if the architecture had been "bleached white"); I hoped to lightly tie together this "erosion" and subtle passage of time with the theme of memory. 
 
 ### Design
 
@@ -148,6 +149,12 @@ The game makes extensive usage of Unity's built-in HDRP water shader. While rese
 The player can rotate in along all three degrees of freedom. The goal was to have unfettered rotational movement, to be able to frame targets in any orientation. However, if the camera was completely unlocked at all times, the game would quickly become unplayable. In order to achieve this while still having a sense of functionality, the game switches between two modes behind the scenes: a default mode that constraints the camera like a standard FPS, and a free mode that activates when the player rotates in the air, which unlocks all degrees of freedom. This scheme was inspired by *Echo Point Nova*, an FPS that also allows for free range of motion, but only once the player signals the intention to do so by moving the mouse in a vertical flipping motion; In this game, rotation is instead mapped to keys (Q/E to roll, R/F to pitch). Combined with the implementation of inertia added to the rotational controls, mapping rotation to keys is meant to emulate the inertia of rotating the entire body, with the mouse movements emulating the smaller motions of the head/neck. 
 
 I drew from several inspirations for the use of free rotation. I was inspired by experimental film, in particular Michael Snow's *La Région Centrale*, a film made with a free-rotating camera filming an empty landscape; simply by using rotational movements in all directions, it manages to convey a full dramatic arc and unique intensity, each rotation as if freely rotating the world itself. I was also inspired by the Winter X Games, coincedentially watching the reruns of the Winter X Games leading up to the jam; I think the image of snowboarders sailing through the sky, rotating in several axes, was fresh in my mind.
+
+### Level Design
+
+The layout of the level resembles a park; each quadrant of the level is meant to have certain landmarks. In this game, it didn't matter that the player was sent equally to all areas of the map; it's more important that each element leaves some sort of impression. For example, one side of the map is isolated by the rest of the level, consisting only of a single rail loop held up by hexagonal supports; this rail can be ridden on indefinitely in a circle, like a roller coaster.
+
+During gameplay, if the player drops through the water, they can catch a glimpse of structures submerged deep underwater; later in the last level, the water level decreases, revealing the structures underneath as new level elements.
 
 ### Sound and Music
 
